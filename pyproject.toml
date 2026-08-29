@@ -1,0 +1,18 @@
+[project]
+name = "python-2nd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "opencv-contrib-python==4.13.0.92",
+    "scikit-image>=0.26.0",
+    "scikit-learn>=1.9.0",
+    "streamlit>=1.60.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "Class/class8",
+]
