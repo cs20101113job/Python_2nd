@@ -1,0 +1,18 @@
+# 排除 macOS 系統檔
+.DS_Store
+
+# 排除虛擬環境
+.venv/
+venv/
+*env*/
+
+# 排除上課目錄與所有作業檔案（徹底隔絕那 10K 個檔案）
+Class/
+class/
+**/Class/**
+**/class/**
+*.pdf
+
+# 排除 uv / vscode 設定
+.vscode/
+uv.lock
