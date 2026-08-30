@@ -21,7 +21,7 @@ if uploaded_file is not None:
     
     #原始上傳圖像
     st.subheader("原始上傳圖像")
-    st.image(original_img, use_column_width=True)
+    st.image(original_img, use_container_width=True)
     #像素特徵提取
     def extract_pixel(original_img): # 定義函數：建立名為 extract_pixel 的函數，接收圖片的 NumPy 陣列（original_img）作為輸入參數。
         gray_img = cv2.cvtColor(original_img, cv2.COLOR_RGB2GRAY) # 轉換為灰階：將 RGB 彩色圖轉為單通道灰階圖，排除顏色干擾並減少資料量。
