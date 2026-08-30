@@ -57,10 +57,10 @@ if uploaded_file is not None:
         display_img = cv2.cvtColor(canny, cv2.COLOR_GRAY2RGB)
     #操作前圖像
     st.subheader("操作前的圖像")
-    st.image(original_img, use_column_width=True)
+    st.image(original_img, use_container_width=True)
     #調整亮暗/對比/閥值/邊緣偵測後的圖像
     st.subheader("操作後的圖像")
-    st.image(display_img, use_column_width=True)
+    st.image(display_img, use_container_width=True)
     #自動儲存
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     image_operation_filename = os.path.join(save_folder, f"image_operation_{timestamp}.png")
