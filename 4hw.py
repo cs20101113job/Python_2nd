@@ -34,7 +34,7 @@ if uploaded_file is not None:
     display_img, pixel_vector = extract_pixel(original_img) # 【關鍵】呼叫函數，取得 display_img 與 pixel_vector
     #像素特徵電腦看的圖像
     st.subheader("像素特徵電腦看的圖像") 
-    st.image(display_img, use_column_width=True) # 顯示灰階圖像，使用 display_img 變數
+    st.image(display_img, use_container_width=True) # 顯示灰階圖像，使用 display_img 變數
     #HOG特徵提取
     def extract_hog(original_img): # 定義函數：建立名為 extract_hog 的函數，接收圖片的 NumPy 陣列（original_img）作為輸入參數。
         gray_img = cv2.cvtColor(original_img, cv2.COLOR_RGB2GRAY) # 轉換為灰階：將 RGB 彩色圖轉為單通道灰階圖，排除顏色干擾並減少資料量。
@@ -51,7 +51,7 @@ if uploaded_file is not None:
     hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range="image", out_range=(0, 255)).astype(np.uint8) 
     #HOG特徵電腦看的圖像
     st.subheader("HOG特徵電腦看的圖像")
-    st.image(hog_image_rescaled, use_column_width=True)
+    st.image(hog_image_rescaled, use_container_width=True)
 
 
     #Pixel自動儲存
